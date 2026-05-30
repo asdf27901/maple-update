@@ -1,3 +1,5 @@
+from ok import find_boxes_within_boundary
+
 from src.enums.LabelEnum import LabelEnum
 from src.tasks.MyBaseTask import MyBaseTask
 from qfluentwidgets import FluentIcon
@@ -54,4 +56,14 @@ class CheckImproveTask(MyBaseTask):
                 self.click_relative(0.583, 0.492, key='left')
                 self.click_relative(0.583, 0.492, key='left')
                 self.click_relative(0.583, 0.492, key='left')
+                break
+
+            # 每次洗完黑火查看是否还有黑火了
+            all_boxes = self.ocr(threshold=0.7)
+            boundary = self.box_of_screen(0.348, 0.816, 0.400, 0.891)
+            num_boxes = find_boxes_within_boundary(all_boxes, boundary)
+            if num_boxes[0].name == '0':
+                self.click_relative(0.410, 0.474, key='left')
+                self.click_relative(0.410, 0.474, key='left')
+                self.click_relative(0.410, 0.474, key='left')
                 break
