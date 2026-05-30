@@ -1,0 +1,15 @@
+from enum import Enum
+
+
+class LabelEnum(str, Enum):
+    BLACKFIRE = 'BLACKFIRE'
+    COLORFIRE = 'COLORFIRE'
+    ENCHANT = 'ENCHANT'
+    EQUIPMENT = 'EQUIPMENT'
+    IMPROVE = 'IMPROVE'
+    INVENTORY = 'INVENTORY'
+    LIGHT1 = 'LIGHT1'
+    LIGHT2 = 'LIGHT2'
+    SUCCESS = 'SUCCESS'
+    SWITCH = 'SWITCH'
+    WHITEFIRE = 'WHITEFIRE'
