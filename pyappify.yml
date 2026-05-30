@@ -1,8 +1,8 @@
-name: "ok-py"
+name: "maple-auto-scripts-v5"
 uac: true
 profiles:
   - name: "China"
-    git_url: "https://cnb.cool/ok-oldking/ok-py.git"
+    git_url: "https://github.com/asdf27901/maple-update.git"
     admin: true
     main_script: "main.py"
     requires_python: "3.12"
@@ -10,8 +10,3 @@ profiles:
     use_pythonw: true
     show_add_defender: true
     # PYTHONPATH: "your/default/path" # Optional, will be "" if missing
-
-  - name: "Global"
-    git_url: "https://github.com/ok-oldking/ok-py-update.git"
-    main_script: "main.py"
-    requirements: "requirements.txt"
